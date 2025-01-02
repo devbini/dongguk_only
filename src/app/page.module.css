@@ -121,5 +121,9 @@
     padding: 32px;
     height: 70vh;
   }
+
+  .button { 
+    margin-top: 20px;
+  }
 }
 

@@ -6,7 +6,7 @@ import logo from "../image/logo.png";
 import kakaologo from "../image/kakao.png";
 import instalogo from "../image/insta.png";
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.banner}>
@@ -46,7 +46,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <Link href="#" className={styles.button}>
+            <Link href="/pdf-viewer" className={styles.button}>
               미래융합대학 학생회칙 {">>"}
             </Link>
           </div>
@@ -54,4 +54,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default Home;
