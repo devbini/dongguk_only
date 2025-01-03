@@ -32,15 +32,7 @@ pipeline {
         stage('Run New Container') {
             steps {
                 script {
-                    sh "docker run -d --name ${DOCKER_CONTAINER} ${DOCKER_IMAGE}"
-                }
-            }
-        }
-
-        stage('Clean Up (Remove image)') {
-            steps {
-                script {
-                    sh "docker rmi ${DOCKER_IMAGE}"
+                    sh "docker run -d -p 80:80 -p 443:443 --name ${DOCKER_CONTAINER} ${DOCKER_IMAGE}"
                 }
             }
         }
